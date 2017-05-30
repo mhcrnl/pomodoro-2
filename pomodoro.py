@@ -140,6 +140,7 @@ class MainWindow(QMainWindow):
         self.toolbar.addAction(self.play)
         self.toolbar.addAction(self.stop)
         self.toolbar.addAction(self.sound)
+        self.toolbar.setMovable(False)
         self.setFixedSize(227, 205)
         self.show()
         self.Time()
@@ -153,6 +154,7 @@ class MainWindow(QMainWindow):
         elif self.pomo.colors[self.pomo.mode] == 'green':
             green = 255
         while self.notify:
+            pass
             self.bstick.pulse(red=red, green=green, blue=blue)
 
     def display_time(self):
